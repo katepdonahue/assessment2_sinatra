@@ -1,9 +1,4 @@
 class Spacecat < ActiveRecord::Base
-  def initialize
-    @name
-    @planet
-    @tagline
-    @superpower
-  end
+  attr_accessor :name, :planet, :tagline, :superpower
 
 end
