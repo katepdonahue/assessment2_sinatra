@@ -15,4 +15,8 @@ class App < Sinatra::Application
     haml :new
   end
 
+  post '/create' do
+    haml :index
+  end
+
 end
