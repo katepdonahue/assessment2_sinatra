@@ -8,6 +8,7 @@ class App < Sinatra::Application
 
   get '/' do
     @spacecats = Spacecat.all
+    haml :index
   end
 
 end
