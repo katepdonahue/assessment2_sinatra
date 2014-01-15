@@ -1,4 +1,4 @@
-class SpaceCat < ActiveRecord::Base
+class Spacecat < ActiveRecord::Base
   def initialize
     @name
     @planet
