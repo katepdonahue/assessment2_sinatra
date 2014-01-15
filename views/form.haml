@@ -1,13 +1,15 @@
 %form{:action=>"/create", :method=>"POST"}
     %label{:for=>"POST-name"} Name:
     %input{:id=>"POST-name", :type=>"text", :name=>"name"}
-
+    %br
     %label{:for=>"POST-planet"} Home Planet:
     %input{:id=>"POST-planet", :type=>"text", :name=>"planet"}
-
+    %br
     %label{:for=>"POST-tagline"} Tagline:
     %input{:id=>"POST-tagline", :type=>"text", :name=>"tagline"}
-
+    %br
     %label{:for=>"POST-superpower"} Superpower:
     %input{:id=>"POST-superpower", :type=>"text", :name=>"superpower"}
+    %br
+    %button{:type=>"submit", :value=>"Create"} Create
 
