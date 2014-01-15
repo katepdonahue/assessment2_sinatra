@@ -8,3 +8,4 @@ gem 'rake'
 
 gem 'shotgun'
 gem 'debugger'
+

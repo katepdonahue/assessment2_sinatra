@@ -2,6 +2,11 @@ require 'bundler'
 Bundler.require
 
 require './lib/spacecat'
+
+ActiveRecord::Base.establish_connection(
+  :adapter => 'sqlite3',
+  :database =>  'sinatra_application.sqlite3.db'
+)
 set :database, "sqlite3:///localhost"
 
 class App < Sinatra::Application
@@ -17,10 +22,11 @@ class App < Sinatra::Application
 
   post '/create' do
     @spacecat = Spacecat.new
-    @spacecat.name = params[:name]
-    @spacecat.planet = params[:planet]
-    @spacecat.tagline = params[:tagline]
-    @spacecat.superpower = params[:superpower]
+    @spacecat.name = params["name"]
+    @spacecat.planet = params["planet"]
+    @spacecat.tagline = params["tagline"]
+    @spacecat.superpower = params["superpower"]
+    debugger
     @spacecat.save
     haml :show
   end
