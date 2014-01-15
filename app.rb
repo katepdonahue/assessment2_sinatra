@@ -21,6 +21,7 @@ class App < Sinatra::Application
     @spacecat.planet = params[:planet]
     @spacecat.tagline = params[:tagline]
     @spacecat.superpower = params[:superpower]
+    @spacecat.save
     haml :show
   end
 
