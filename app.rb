@@ -11,4 +11,8 @@ class App < Sinatra::Application
     haml :index
   end
 
+  get '/new' do
+
+  end
+
 end
