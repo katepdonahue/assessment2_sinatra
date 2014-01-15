@@ -1,1 +1,6 @@
-hello?
+%h1 Space Cats
+%ul
+  - @spacecats.each do |cat|
+    %li= cat
+
+%a{:href=>"/cats/new"} New
