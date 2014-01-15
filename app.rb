@@ -16,7 +16,11 @@ class App < Sinatra::Application
   end
 
   post '/create' do
-
+    @spacecat = Spacecat.new
+    @spacecat.name = params[:name]
+    @spacecat.planet = params[:planet]
+    @spacecat.tagline = params[:tagline]
+    @spacecat.superpower = params[:superpower]
     haml :show
   end
 
