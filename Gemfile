@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'sinatra'
 gem 'sinatra-activerecord'
-gem 'sql'
+gem 'sqlite3'
 gem 'haml'
 
 gem 'shotgun'
