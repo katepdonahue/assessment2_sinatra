@@ -17,6 +17,7 @@ class App < Sinatra::Application
   end
 
   get '/new' do
+    @spacecat = Spacecat.new
     haml :new
   end
 
@@ -26,8 +27,8 @@ class App < Sinatra::Application
     @spacecat.planet = params["planet"]
     @spacecat.tagline = params["tagline"]
     @spacecat.superpower = params["superpower"]
-    debugger
     @spacecat.save
+    debugger
     haml :show
   end
 
@@ -47,6 +48,7 @@ class App < Sinatra::Application
     @spacecat.planet = params["planet"]
     @spacecat.tagline = params["tagline"]
     @spacecat.superpower = params["superpower"]
+    @spacecat.save
     haml :show
   end
 
