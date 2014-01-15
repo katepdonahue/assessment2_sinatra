@@ -12,7 +12,7 @@ class App < Sinatra::Application
   end
 
   get '/new' do
-
+    haml :new
   end
 
 end
