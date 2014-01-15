@@ -1,6 +1,8 @@
 %h1 Space Cats
 %ul
   - @spacecats.each do |spacecat|
-    %li= spacecat.name
+    %li
+      = spacecat.name
+      %a{:href=>"/#{spacecat.id}"} Show
 
 %a{:href=>"/new"} New
